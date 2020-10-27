@@ -7,8 +7,7 @@
         char valor[50];
     } token;
 
-    #define YY_DECL
-    extern token yylex (void)
+    #define YY_DECL token yylex (void)
 
     token nuevo(int clase, char* valor);
 
@@ -47,7 +46,7 @@ token nuevo (int clase, char* valor){
     return t;
 }
 
-int main (){
+int main (int argc, char **argv){
     FILE *file;
     if(argc < 2){
         printf("No se especifico el archivo\n");
