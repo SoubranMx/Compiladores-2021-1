@@ -59,14 +59,14 @@ int main (int argc, char **argv){
         return -1;
     }
 
-    yyin = false;
+    
 
     token t = yylex();
     token f = nuevo(0,"");
 
     while(t.clase != f.clase){
         printf("Encontre: <%d, %s>\n",t.clase, t.valor);
-        t = yylex;
+        t = yylex();
     }
 
     return 0;
